@@ -7,61 +7,36 @@
     <title>favicon</title>
     <link rel="icon" href="./img/fav/favicon (1).ico">
     <style>
-        body{
-            margin:0;
-
-        }
-        ul{
-            list-style-type: none;
-            margin: 0  0  0;
-            padding: 0;
-            overflow: hidden;
-            overflow: auto;
-            background-color: #333;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            /* bottom: 0; */
-            /* for footer */
-            
-        }
-        li {
-            float: left;
+        .dropdown {
+            position: relative;
+            display: inline-block;
         }
 
-       li a{
-        display: block;
-        padding: 14px 16px;
-        text-decoration: none;
-        text-align: center;
-        color: #fff;
-        
-       }
-        .active{
-            background-color: #4caf50;
-
-        }
-        li a:hover:not(.active){
-            background: #111;
-        }
-        li .active:hover{
-            background: red;
+        .dp-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
         }
 
+        .dropdown:hover .dp-content {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-    <ul>
-        <li><a href="#main" class="active">Main</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contacts">Contacts</a></li>
-        <li><a href="#our_projects">Our projects</a></li>
-        <li><a href="#maps">Maps</a></li>
-        <li style="float: right;"><a href="#">Login</a></li>
-    </ul>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+    <div class="dropdown">
+        <span>My mouse to myself</span>
+        <div class="dp-content">
+            <p>
+                Hello, World!!!!
+            </p>
+        </div>
+    </div>
 </body>
 
 </html>

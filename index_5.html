@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Overflow</title>
+    <style>
+*{
+    box-sizing: border-box;
+}
+.image-container{
+    float: left;
+    width: 33%;
+    padding: 5px;
+}
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+h2{
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+<h2>Side by side</h2>
+<div class="clearfix">
+    <div class="image-container">
+        <img src="./img/8.jpg" alt="" style="width: 100%;">
+    </div>
+    <div class="image-container">
+        <img src="./img/8.jpg" alt="" style="width: 100%;">
+    </div>
+    <div class="image-container">
+        <img src="./img/8.jpg" alt="" style="width: 100%;">
+    </div>
+</div>
+    
+</body>
+
+</html>

@@ -6,42 +6,30 @@
     <title>favicon</title>
     <link rel="icon" href="./img/fav/favicon (1).ico">
     <style>
-        h1, h2{text-align: center;}
-        .a{
-            display: inline;
-            width: 100px;
-            height: 100px;
-            padding: 15px;
-            border: 2px solid blue;
-            background-color: aquamarine;
-        }
-        .b{
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-            padding: 15px;
-            border: 2px solid blue;
-            background-color: aquamarine;
-        }
-        .c{
-            display: block;
-            width: 100px;
-            height: 100px;
-            padding: 15px;
-            border: 2px solid blue;
-            background-color: aquamarine;
-        }
+       .nav{
+        background-color:antiquewhite;
+        padding: 15px;
+        list-style-type: none;
+        text-align: center;
+       }
+       .nav li{
+        display: inline-block;
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 22px;
+       }
+        a{
+        text-decoration: none;
+       }
     </style>
 </head>
 <body>
-    <h1>Display</h1>
-    <h2>inline</h2>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veritatis temporibus debitis reiciendis alias fugiat itaque. Maiores,  <span class="a">adipisci neque optio fugiat,</span><span class="a"> eum earum, ullam</span> debitis autem eaque doloremque quas!</div>
-
-    <h2>inline-block</h2>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veritatis temporibus debitis reiciendis alias fugiat itaque. Maiores,  <span class="b">adipisci neque optio fugiat,</span><span class="b"> eum earum, ullam</span> debitis autem eaque doloremque quas!</div>
-
-    <h2>block</h2>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veritatis temporibus debitis reiciendis alias fugiat itaque. Maiores,  <span class="c">adipisci neque optio fugiat,</span><span class="c"> eum earum, ullam</span> debitis autem eaque doloremque quas!</div>
+    <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#map">Map</a></li>
+    </ul>
+    
 </body>
 </html>

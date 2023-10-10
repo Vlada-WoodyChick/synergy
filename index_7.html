@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-   
+
     <title>Text Shadow!</title>
     <style>
-div{
-    width: 300px;
-    height: 150px;    
-    border: 1px solid grey;
-    background-color: blue;
-   animation-name: example;
-   animation-duration: 4000ms;
-   animation-delay: 5000ms;
-}
+        div {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: tomato;
+            animation-name: example;
+            animation-duration: 6s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+        }
 
-@keyframes example{
-    0%{background-color: blue;}
-    20% {background-color: blueviolet;}
-    40%{background-color: #ff00d0;}
-    60%{background-color: #ff0008;}
-80%{background-color: #f0ec0bdc;}
-100%{background-color: blue;}
-    
-}
+        @keyframes example {
+            0% {
+                background-color: tomato;
+                left: 0px;
+                top: 0px;
+            }
 
-       
+            25% {
+                background-color: deepskyblue;
+                left: 300px;
+                top: 0px;
+                border-radius: 50%;
+            }
+
+            50% {
+                background-color: green;
+                left: 300px;
+                top: 300px;
+                border-radius: 50%;
+            }
+
+            75% {
+                background-color: blue;
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                background-color: tomato;
+                left: 0px;
+                top: 0px;
+            }
+        }
     </style>
 </head>
+
 <body>
- <h2>Transformation!</h2>
- <div>Some text!</div>
- 
- 
- 
-    </body>
+    <h2>Transformation!</h2>
+    <div>Some text!</div>
+
+
+
+</body>
+
 </html>

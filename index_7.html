@@ -12,12 +12,19 @@ div{
     background-color: blue;
    animation-name: example;
    animation-duration: 4000ms;
+   animation-delay: 5000ms;
 }
 
 @keyframes example{
-    from {background-color: tomato;}
-    to{background-color: brown;}
+    0%{background-color: blue;}
+    20% {background-color: blueviolet;}
+    40%{background-color: #ff00d0;}
+    60%{background-color: #ff0008;}
+80%{background-color: #f0ec0bdc;}
+100%{background-color: blue;}
+    
 }
+
        
     </style>
 </head>

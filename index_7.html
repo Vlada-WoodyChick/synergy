@@ -10,11 +10,29 @@
         width: 100px;
         height: 100px;
         background: tomato;
-        transition: width 500ms, height 1000ms;
+       transition: width 2000ms;
+        transition-delay: 1000ms;
+        /* transition: width 2000ms linear 1000ms; */
        }
        div:hover{
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        
+       }
+       #div1{
+        transition-timing-function: linear;
+       }
+       #div2{
+        transition-timing-function: ease;
+       }
+       #div3{
+        transition-timing-function: ease-in;
+       }
+
+       #div4{
+        transition-timing-function: ease-out;
+       }
+       #div5{
+        transition-timing-function: ease-in-out;
        }
         
     </style>
@@ -22,8 +40,15 @@
 <body>
  <h2>Text Shadow!</h2>
  
- <div></div>
-
+ <div id="div1">linear</div>
+ <br>
+ <div id="div2">ease</div>
+ <br>
+ <div id="div3">ease-in</div>
+ <br>
+ <div id="div4">ease-out</div>
+ <br>
+ <div id="div5">ease-in-out</div>
  
     </body>
 </html>

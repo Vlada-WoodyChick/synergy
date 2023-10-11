@@ -2,27 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   
-    <title>Text Shadow!</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
     <style>
-div{
-    width: 300px;
-    height: 150px;
-    background-color: aqua;
-    border: 1px solid grey;
-    
+       *{
+        box-sizing: border-box;
+       }
+       .top-nav{
+        overflow: hidden;
+        background-color: #333;
+       }
+.top-nav a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-div:hover{
-    transform:   translate(50px, 100px) rotate(30deg);
+.top-nav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+@media screen and (max-width: 600px){
+    .top-nav a{
+        width: 100%;
+        float: none;
+    }
 }
        
     </style>
 </head>
 <body>
- <h2>Transformation!</h2>
- <div>Some text!</div>
- 
- 
- 
-    </body>
+   <h2>@media</h2> 
+   <div class="top-nav">
+    <a href="#">link</a>
+    <a href="#">link</a>
+    <a href="#">link</a>
+    <a href="#">link</a>
+   </div>
+
+
+</body>
 </html>

@@ -6,71 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        img{
-            width: 33%;
-            float: left;
-            height: auto;
-            padding: 10px;
-            box-sizing: border-box;
-            
-
+        .flex-contanier {
+            display: flex;
+            background: deepskyblue;            
+            align-items:flex-start;
+            height: 400px;
+            justify-content:space-between;
+            flex-wrap: wrap;
         }
-       .filt:hover{
-        filter: grayscale(50%);
-       }
-       .blur:hover{
-        filter: blur(1px);
-       }
-.brightness:hover{
-    filter: brightness(0.30);
-}
-.contrast:hover{
-    filter: contrast(180%);
-    
-}
-.huerotate{
-filter: hue-rotate(50deg);
-}
 
-.invert{
-filter: invert(100%);
-}
-.opacity{
-    filter: opacity(50%);
-
-}
-.sepia{
-filter: sepia(100%);
-
-}
-.saturate{
-filter: saturate(100%);
-}
-.shadow{
-    filter: drop-shadow(4px 4px 16px darkblue);
-}
-.testimg{
-    filter: brightness(50%) contrast(200%) hue-rotate(200deg);
-}
-
+            .flex-contanier > div {
+                background: #f1f1f1;
+                margin: 10px;
+                padding: 20px;
+                font-size: 30px;
+            }
+        
     </style>
 </head>
 
 <body>
-    <h2>filters</h2>
-    
-    <img src="./img/12.jpg"  width="100%" class="">
-   <img src="./img/12.jpg"  width="100%" class="filt">
-   <img src="./img/12.jpg"  width="100%" class="blur">
-   <img src="./img/12.jpg"  width="100%" class="brightness">
-   <img src="./img/12.jpg"  width="100%" class="contrast">
-   <img src="./img/12.jpg"  width="100%" class="huerotate">
-   <img src="./img/12.jpg"  width="100%" class="invert">
-   <img src="./img/12.jpg"  width="100%" class="opacity">
-   <img src="./img/12.jpg"  width="100%" class="sepia">
-   <img src="./img/12.jpg"  width="100%" class="sepia">
-   <img src="./img/12.jpg"  width="100%" class="shadow">
-   <img src="./img/12.jpg"  width="100%" class="testimg">
+    <h2>Flex-box</h2>
+    <div class="flex-contanier">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+    </div>
+
+
 </body>
 
 </html>

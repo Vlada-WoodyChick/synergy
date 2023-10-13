@@ -6,81 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #grad1 {
-            height: 200px;
-            background: linear-gradient(red, yellow);
-            margin: 0 0 15px 0;
-        }
+        img{
+            width: 33%;
+            float: left;
+            height: auto;
+            padding: 10px;
+            box-sizing: border-box;
+            
 
-        #grad2 {
-            height: 200px;
-            background: linear-gradient(to right, red, yellow);
-            margin: 0 0 15px 0;
         }
-        #grad3 {
-            height: 200px;
-            background: linear-gradient(-60deg, red, yellow);
-            margin: 0 0 15px 0;
-        }
-        #grad4{
-            height: 200px;
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            margin-bottom: 15px;
-        }
-        #grad5{
-            height: 200px;
-            background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
-            margin: 0 0 15px 0; 
-        }
-        #grad6{
-            height: 200px;
-            background:  repeating-linear-gradient(red, yellow 10%, indigo 20%);
-            margin: 0 0 15px 0;
-        }
-       #grad7{
-        height: 200px;
-        background: radial-gradient(circle, red, yellow, green);
-        margin: 0 0 15px 0;
+       .filt:hover{
+        filter: grayscale(50%);
        }
-       #grad8{
-        height: 200px;
-        background: radial-gradient(closest-side, red, yellow, green);
-        margin: 0 0 15px 0;
+       .blur:hover{
+        filter: blur(1px);
        }
-#grad9{
-    height: 200px;
-        background: radial-gradient(closest-side at 60% 55%, red, yellow, green);
-        margin: 0 0 15px 0;
+.brightness:hover{
+    filter: brightness(0.30);
 }
-#grad10{
-    height: 200px;
-        background: radial-gradient(farthest-side at 60% 55%, red, yellow, green);
-        margin: 0 0 15px 0;
+.contrast:hover{
+    filter: contrast(180%);
+    
 }
-#grad11{
-    height: 200px;
-        background: repeating-radial-gradient( red, yellow 10%, green 15%);
-        margin: 0 0 15px 0;
+.huerotate{
+filter: hue-rotate(50deg);
+}
+
+.invert{
+filter: invert(100%);
+}
+.opacity{
+    filter: opacity(50%);
+
+}
+.sepia{
+filter: sepia(100%);
+
+}
+.saturate{
+filter: saturate(100%);
+}
+.shadow{
+    filter: drop-shadow(4px 4px 16px darkblue);
+}
+.testimg{
+    filter: brightness(50%) contrast(200%) hue-rotate(200deg);
 }
 
     </style>
 </head>
 
 <body>
-    <h2>Gradients</h2>
-    <div id='grad1'></div>
-    <div id='grad2'></div>
-    <div id='grad3'></div>
-    <div id='grad4' style="text-align: center;
-     color: #888888; font-size: 36px; font-weight: bold;">Some text here.</div>
-    <br>
-    <div id='grad5'></div>
-    <div id="grad6"></div>
-    <div id="grad7"></div>
-    <div id="grad8"></div>
-    <div id="grad9"></div>
-    <div id="grad10"></div>
-    <div id="grad11"></div>
+    <h2>filters</h2>
+    
+    <img src="./img/12.jpg"  width="100%" class="">
+   <img src="./img/12.jpg"  width="100%" class="filt">
+   <img src="./img/12.jpg"  width="100%" class="blur">
+   <img src="./img/12.jpg"  width="100%" class="brightness">
+   <img src="./img/12.jpg"  width="100%" class="contrast">
+   <img src="./img/12.jpg"  width="100%" class="huerotate">
+   <img src="./img/12.jpg"  width="100%" class="invert">
+   <img src="./img/12.jpg"  width="100%" class="opacity">
+   <img src="./img/12.jpg"  width="100%" class="sepia">
+   <img src="./img/12.jpg"  width="100%" class="sepia">
+   <img src="./img/12.jpg"  width="100%" class="shadow">
+   <img src="./img/12.jpg"  width="100%" class="testimg">
 </body>
 
 </html>

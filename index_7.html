@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-video{
-    width: 80%;
-    height: auto;
-}
+        #grad1 {
+            height: 200px;
+            background: linear-gradient(red, yellow);
+            margin: 0 0 15px 0;
+        }
+
+        #grad2 {
+            height: 200px;
+            background: linear-gradient(to right, red, yellow);
+            margin: 0 0 15px 0;
+        }
+        #grad3 {
+            height: 200px;
+            background: linear-gradient(-60deg, red, yellow);
+            margin: 0 0 15px 0;
+        }
+        #grad4{
+            height: 200px;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            margin-bottom: 15px;
+        }
+        #grad5{
+            height: 200px;
+            background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+            margin: 0 0 15px 0; 
+        }
+        #grad6{
+            height: 200px;
+            background:  repeating-linear-gradient(red, yellow 10%, indigo 20%);
+            margin: 0 0 15px 0;
+        }
     </style>
 </head>
+
 <body>
-    <h2>Mistake</h2>
-    <video width="800" controls>
-        <source src="./img/10.jpg"  type="video/mp4" >
-        Your browser isn't able to show mpg4 files
-    </video>
+    <h2>Gradients</h2>
+    <div id='grad1'></div>
+    <div id='grad2'></div>
+    <div id='grad3'></div>
+    <div id='grad4' style="text-align: center;
+     color: #888888; font-size: 36px; font-weight: bold;">Some text here.</div>
+    <br>
+    <div id='grad5'></div>
+    <div id="grad6"></div>
 </body>
+
 </html>

@@ -7,80 +7,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <style>
-        table{
-            /* border-collapse: collapse; */
-            border-spacing: 2px;
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 16px;
-            text-align: center;
-            border: 1px solid black;
-            
-        }
-        th:first-child, td:first-child{
-            text-align: left;
-        }
-        tr:nth-child(even){
-            background: #f2f2f2;
-        }
-        .fa-check{
-            color: aqua;
-        }
-        .fa-remove{
-            color: red;
-        }
-        th{
-            height: 100px;
-            vertical-align: bottom;
-        }
-        tr:hover{
-            background-color: lightgreen;
-        }
+     .pagination{
+        display: inline-block;
+
+     }   
+     .pagination a{
+        color: black;
+        float: left;
+        text-decoration: none;
+        padding: 8px 16px;
+        transition: background-color .8s;
+        border: 1px solid #ddd;
+        margin: 0 1px;
+     }
+    .pagination a.active{
+        background-color: green;
+        color:white;
+        border-radius: 5px;
+     }
+     .pagination a:hover:not(.active){
+        background-color: #ddd;
+        color:white;
+        border-radius: 5px;
+     }
+     .center{
+        text-align: center;
+     }
     </style>
 </head>
 
 <body>
-    <table>
-        <caption>Hotels</caption>
-        <tr>
-            <th style="width: 50%;">
-                название
-            </th>
-            <th>
-                санузел
-            </th>
-            <th>
-                завтрак
-            </th>
-            <th>
-                wi-fi
-            </th>
-           
-
-        </tr>
-
-        <tr>
-            <td>Hilton</td>
-            <td><i class="fa fa-check"></i></td>
-            <td><i class="fa fa-check"></i></td>
-            <td><i class="fa fa-check"></i></td>
-            
-        </tr>
-        <tr style="background-color: bisque;">
-            <td >star</td>
-            <td><i class="fa fa-remove"></i></td>
-            <td><i class="fa fa-remove"></i></td>
-            <td><i class="fa fa-remove"></i></td>
-        </tr>
-        <tr>
-            <td>top</td>
-            <td><i class="fa fa-check"></i></td>
-            <td><i class="fa fa-remove"></i></td>
-            <td><i class="fa fa-remove"></i></td>
-        </tr>
-        
-    </table>
+    <div class="center">
+        <h1>Pagination</h1>
+   <div class="pagination">
+    <a href="#"><i class="fa fa-arrow-left"></i></a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#" class="active">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#"><i class="fa fa-arrow-left"></i></a>
+   </div>
+    </div>
+   
 </body>
 
 </html>

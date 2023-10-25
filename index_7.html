@@ -6,100 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            box-sizing: border-box;
+        *{
+            font-size: 20px;
         }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .header {
-            text-align: center;
-            padding: 30px;
-        }
-
-        .row {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            padding: 0 4px;
-        }
-
-        .column {
-            flex: 25%;
-            max-width: 25%;
-            padding: 0 3px;
-
-        }
-        .column img{
-            margin-top: 4px;
-            vertical-align: middle;
-        }
-        @media (max-width: 900px) {
-            .column{
-                flex: 50%;
-                max-width: 50%;
-            }
-        }
-        @media (max-width: 600) {
-           .column{
-            flex: 100%;
-                max-width: 100%;
-           }
-
+        .font--1-2{
+            
+            background: #000000;
+            font-size: 1.2em;
+            color: aliceblue;
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <h2> Сетка адаптивного изображения</h2>
-        <p>Изменяем размер экрана посмотреть эффект</p>
+    <div class="font--1">
+        font--1
     </div>
-
-    <div class="row">
-        <div class="column">
-            <img src="./img/1.jpg" alt="" width="100%">
-            <img src="./img/8.jpg" alt="" width="100%">
-            <img src="./img/12.jpg" alt="" width="100%">
-            <img src="./img/14.jpg" alt="" width="100%">
-            <img src="./img/6.jpg" alt="" width="100%">
-            <img src="./img/16.jpg" alt="" width="100%">
-        </div>
-
-        <div class="column">
-            <img src="./img/14.jpg" alt="" width="100%">
-            <img src="./img/16.jpg" alt="" width="100%">
-            <img src="./img/1.jpg" alt="" width="100%">
-            <img src="./img/12.jpg" alt="" width="100%">
-            <img src="./img/6.jpg" alt="" width="100%">
-            <img src="./img/8.jpg" alt="" width="100%">
-        </div>
-
-        <div class="column">
-            <img src="./img/8.jpg" alt="" width="100%">
-            <img src="./img/6.jpg" alt="" width="100%">
-            <img src="./img/12.jpg" alt="" width="100%">
-            <img src="./img/1.jpg" alt="" width="100%">
-            <img src="./img/14.jpg" alt="" width="100%">
-            <img src="./img/16.jpg" alt="" width="100%">
-        </div>
-
-        <div class="column">
-            <img src="./img/1.jpg" alt="" width="100%">
-            <img src="./img/8.jpg" alt="" width="100%">
-            <img src="./img/14.jpg" alt="" width="100%">
-            <img src="./img/6.jpg" alt="" width="100%">
-            <img src="./img/12.jpg" alt="" width="100%">
-            <img src="./img/16.jpg" alt="" width="100%">
-        </div>
+    <div class="font--1-2">
+        font--1.2
+        
     </div>
+    <form action="">
+        <label for="first-name">Имя:</label>
+        <input type="text" id="first-name" minlength="5" maxlength="10">
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <br>
+        <br>
+        <label>
+            Age:
+            <input type="number" min="10" max="110">
+        </label>
+        <label for="">
+            Choose your favorite color
+            <input type="color">
+        </label>
+        <br>
+        <br>
+        <span>
+            Languages you know:
+            <br>
+            <label><input type="checkbox">English</label><br>
+            <label><input type="checkbox">Russian</label><br>
+            <label><input type="checkbox">Portugal</label>
+            <br><br>
+        </span>
 
+
+            <!-- <label for="pet-select">Choose a pet:</label>
+
+                <select id="pet-select">
+                  <option value="">--Please choose an option--</option>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="hamster">Hamster</option>
+                  <option value="parrot">Parrot</option>
+                  <option value="spider">Spider</option>
+                  <option value="goldfish">Goldfish</option>
+                </select> -->
+
+            <label for="options">Options</label>
+            <br>
+            <select name="opt" id="options">
+                <option name="opt" value="">--Please choose an option--</option>
+                <option name="opt" value="opt1">Option1</option>
+                <option name="opt" value="opt2">Option2</option>
+                <option name="opt" value="opt3">Option3</option>
+            </select>
+            <br> <br>
+
+            <div input input__radio>
+                What's your gender?
+
+                <div>                    
+                    <input type="radio" name="gender" id="men">
+                    <label for="men">Male</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="woman">
+                    <label for="woman">Female</label>                    
+                </div>             
+               
+            </div>
+
+<div>
+    <input type="file" accept=".jpg, png, .svg">
+</div>
+<div>
+    <p>Lorem, ipsum dolor.</p>
+    <input type="date">
+    <input type="time">
+</div>
+<div>
+    <input type="">
+</div>
+<div>
+    <textarea name="" id="" cols="30" rows="15"></textarea>
+</div>
+
+        <br>
+        <br>
+        <input type="submit">
+        <input type="reset">
+
+    </form>
+    <div class="mail">
+        <a href="mailto:uchusa@mail.ru">send me a letter</a>
     </div>
-
-
 </body>
 
 </html>

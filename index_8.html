@@ -8,32 +8,24 @@
     <style>
         .grid-conten {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 50px 50px 50px;
+            justify-content: space-around;
+            align-items: center;
+            grid-gap: 10px;
             padding: 10px;
-            background-color: lightgray;
-            grid-gap: 10px 15px;
+            background-color: cornflowerblue;
+           
         }
 
-        .grid-conten > div {
-            background-color: rgba(255, 255, 255, 0.7);
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
+       .grid-conten>div{
+        background-color: aquamarine;
+        font-size: 30px;
+        text-align: center;
+        padding:  20px;
+       }
 
        
-        .item-1{
-            grid-column-start: 1;
-            grid-column-end: 4;
-
-        }
-
-        .item-8{
-            grid-column-start: 1;
-            grid-column-end: 4;
-
-        }
+       
     </style>
 </head>
 
@@ -47,7 +39,7 @@
         <div class="item-6">6</div>
         <div class="item-7">7</div>
         <div class="item-8">8</div>
-        <div class="item-9">9</div>
+        
         
     </div>
 </body>

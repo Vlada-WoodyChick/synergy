@@ -1,65 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
-        body{
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
+
+        div.block {
+            background: url(./img/9.jpg) repeat;
+            border: 1px solid black;
         }
-        .header__header {
-            background-color: #f1f1f1;
-            padding: 30px;
-            text-align: center;
-            font-size: 30px;
-}
 
-.row__colunm {
-    float: left;
-    padding: 10px;
-    width: 33.3%;
-    height: 300px;
+        div.transbox {
+            margin: 30px;
+            background-color: #fff;
+            border: 1px solid black;
+            opacity: 0.6;
+        }
 
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* .row__colunm_1 {
-}
-.row__colunm_2 {
-}
-.row__colunm_3 {
-} */
-.footer__footer {
-    background-color: #f2f2;
-    padding: 10px;
-    text-align: center;    
-}  
-@media ( max-width: 600px) {
-    .row__colunm {
-        width:100%;
-        height: 100px;
-    }
-}
+        div.transbox p {
+            margin: 5%;
+            font-weight: bold;
+            color: #000000;
+            /* height: 90vh; */
+            
+        }
     </style>
 </head>
+
 <body>
-    <div class="header__header">Header</div>
-    <div class="row">
-        <div class="row__colunm row__colunm_1" style="background-color: #aaa;">Column_1</div>
-        <div class="row__colunm row__colunm_2" style="background-color: #bbb;">Column_2</div>
-        <div class="row__colunm row__colunm_3" style="background-color: #ccc;">Column_3</div>
+    <div class="block">
+        <div class="transbox">
+            <p>Some cool text here!</p>
+
+        </div>
     </div>
-    <div class="footer__footer">Footer</div>
-</body> 
+</body>
+
 </html>

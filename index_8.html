@@ -6,80 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        * {
             box-sizing: border-box;
-            padding: 0;
-            margin: 0;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
         }
-        .content {
-            position: relative;
-            /* top: 20px;
-        left: 20px; */
-            color: red;
-            text-align: center;
-            font-size: 20px;
+
+        body {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .cont{
+            position:relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .cont img {
+            vertical-align: middle;
+            width: 100%;
+            
             
         }
 
-        .content__bottom-left {
+        .cont .content {
             position: absolute;
-            bottom: 10px;
-            left: 16px;
+            bottom: 0;
+            color: white;
+            background: rgba(0, 0, 0, .1);
+            padding: 20px;
+            width: 100%;
+            border: 2px red dotted;
+            
         }
-
-        .content__top-left {
-            position: absolute;
-            top: 10px;
-            left: 16px;
-        }
-
-        .content__top-right {
-            position: absolute;
-            top: 10px;
-            right: 16px;
-
-        }
-
-        .content__bottom-right {
-            position: absolute;
-            bottom: 10px;
-            right: 16px;
-        }
-            .content__centred {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        
     </style>
 </head>
 
 <body>
-
-
-    <div class="content">
-        <img src="./img/15.jpg" alt="" width="100%">
-
-        <div class="content__bottom-left">
-            Bottom-left
+    <div class="cont">
+        <img src="./img/11.jpg" alt="" style="width: 100%;">
+        <div class="content">
+            <h2>Title h2</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde sapiente corrupti, quisquam officia odit
+                ut aperiam quam dignissimos! Quaerat quod doloremque quasi optio amet impedit eaque perferendis, velit a
+                dolore. Error quo, autem voluptatum quia itaque dicta temporibus excepturi labore?</p>
         </div>
-        <div class="content__top-left">
-            top-left
-        </div>
-        <div class="content__top-right">
-            top-right
-        </div>
-        <div class="content__bottom-right">
-            bottom-right
-        </div>
-        <div class="content__centred">
-            centred
-        </div>
-
     </div>
-
-
 </body>
 
 </html>

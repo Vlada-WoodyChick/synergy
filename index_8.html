@@ -1,60 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-.item-1{
-    grid-area: header;
-}
-
-.item-2{
-    grid-area: menu;
-}
-.item-3{
-    grid-area: main;
-}
-.item-4{
-    grid-area: right;
-}
-.item-5{
-    grid-area: footer;
-}
-
-        .grid-conten {
-            display: grid;
-            grid-template-areas: 
-            'header header header header header'
-            'menu main main main right'
-            'menu footer footer footer footer';
-            grid-gap: 10px;
-            padding: 10px;
-            background-color: cornflowerblue;
-           /* выделили 5 областей, разметили 5 колонок и  и три строки и обеъденили, как нужно */
+        html{
+            padding: 0;
+            margin: 0;  
+        }
+        body {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: blanchedalmond;
+            
         }
 
-       .grid-conten>div{
-        background-color: aquamarine;
-        font-size: 30px;
-        text-align: center;
-        padding:  20px 0;
-       }
+        .content-block__header {
+            grid-area: header;
+            height: 16vh;
+            background-color: aqua;
+        }
 
-       
-       
+        .content-block__column_column-1 {
+            grid-area: column-1;
+            height: 60vh;
+            background-color: brown;
+        }
+
+        .content-block__column_column-2 {
+            grid-area: column-2;
+            height: 60vh;
+            background-color: blue;
+        }
+
+        .content-block__column_column-3 {
+            grid-area: column-3;
+            height: 60vh;
+            background-color: blueviolet;
+            overflow: auto;
+        }
+
+        .content-block__footer {
+            grid-area: footer;
+            background-color: aquamarine;
+            height: 15vh;
+        }
+
+        .content-block__contanier {
+            width: 96%;
+            padding: 2vh 2% 2vh 2%;
+            /* background-color: blanchedalmond; */
+            display: grid;
+            grid-gap: 2% 2vh;
+            grid-template-areas:
+                'header header header header header'
+                'column-1 column-1 column-2 column-3 column-3'
+                'footer footer footer footer footer';
+            overflow-y: none;  
+            overflow-x: none;  
+
+        }
+
+        /* .content-block__column {} */
+        .content-block__inner_column-3{
+            background-color: deeppink;
+            height: 300vh;
+            width: 90%;
+            margin: 5vh 5%;
+            overflow: auto;
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="grid-conten">
-        <div class="item-1">header</div>
-        <div class="item-2">menu</div>
-        <div class="item-3">main</div>
-        <div class="item-4">right</div>
-        <div class="item-5">footer</div>
+    <div class="content-block__contanier">
+        <div class="content-block__header">
+            Header
+        </div>
+        <div class="content-block__column content-block__column_column-1">
+            Column-1
+        </div>
+        <div class="content-block__column content-block__column_column-2">
+            Column-2
+        </div>
+        <div class="content-block__column content-block__column_column-3">
+            <div class="content-block__inner content-block__inner_column-3">
+                Column-3;
+            </div>
+
+        </div>
+        <div class="content-block__footer">
+            Footer
+        </div>
+
     </div>
 </body>
 

@@ -1,104 +1,58 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html{
-            padding: 0;
-            margin: 0;  
-        }
-        body {
+        *{
             box-sizing: border-box;
-            width: 100%;
+        }
+        body{
+            box-sizing: border-box;
             padding: 0;
             margin: 0;
-            background-color: blanchedalmond;
-            
         }
-
-        .content-block__header {
-            grid-area: header;
-            height: 16vh;
-            background-color: aqua;
-        }
-
-        .content-block__column_column-1 {
-            grid-area: column-1;
-            height: 60vh;
-            background-color: brown;
-        }
-
-        .content-block__column_column-2 {
-            grid-area: column-2;
-            height: 60vh;
-            background-color: blue;
-        }
-
-        .content-block__column_column-3 {
-            grid-area: column-3;
-            height: 60vh;
-            background-color: blueviolet;
-            overflow: auto;
-        }
-
-        .content-block__footer {
-            grid-area: footer;
-            background-color: aquamarine;
-            height: 15vh;
-        }
-
-        .content-block__contanier {
-            width: 96%;
-            padding: 2vh 2% 2vh 2%;
-            /* background-color: blanchedalmond; */
-            display: grid;
-            grid-gap: 2% 2vh;
-            grid-template-areas:
-                'header header header header header'
-                'column-1 column-1 column-2 column-3 column-3'
-                'footer footer footer footer footer';
-            overflow-y: none;  
-            overflow-x: none;  
-
-        }
-
-        /* .content-block__column {} */
-        .content-block__inner_column-3{
-            background-color: deeppink;
-            height: 300vh;
-            width: 90%;
-            margin: 5vh 5%;
-            overflow: auto;
-        }
-
+        .header__header {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+}
+.row {
+    display: flex;
+}
+.row__colunm {
+    flex: 1;
+    padding: 10px;
+    height: 300px;
+}
+.row__colunm_1 {
+}
+.row__colunm_2 {
+}
+.row__colunm_3 {
+}
+.footer__footer {
+    background-color: #f2f2;
+    padding: 10px;
+    text-align: center;
+    max-width: ;
+}  
+@media ( max-width: 600px) {
+    .row {
+    flex-direction: column;
+}
+}
     </style>
 </head>
-
 <body>
-    <div class="content-block__contanier">
-        <div class="content-block__header">
-            Header
-        </div>
-        <div class="content-block__column content-block__column_column-1">
-            Column-1
-        </div>
-        <div class="content-block__column content-block__column_column-2">
-            Column-2
-        </div>
-        <div class="content-block__column content-block__column_column-3">
-            <div class="content-block__inner content-block__inner_column-3">
-                Column-3;
-            </div>
-
-        </div>
-        <div class="content-block__footer">
-            Footer
-        </div>
-
+    <div class="header__header">Header</div>
+    <div class="row">
+        <div class="row__colunm row__colunm_1" style="background-color: #aaa;">Column_1</div>
+        <div class="row__colunm row__colunm_2" style="background-color: #bbb;">Column_2</div>
+        <div class="row__colunm row__colunm_3" style="background-color: #ccc;">Column_3</div>
     </div>
-</body>
-
+    <div class="footer__footer">Footer</div>
+</body> 
 </html>

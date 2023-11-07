@@ -12,8 +12,11 @@
     <h2>JS Lesson1</h2>
     
     <p id="demo">Hello, World!</p>
-    <button type="button" onclick="document.getElementById('demo').style.fontSize='40px'">Click!</button>
-    <button type="button" onclick="document.getElementById('demo').style.fontSize='20px'">Click!</button>
-    <button type="button" onclick="document.getElementById('demo').style.display='none'">Click!</button>
+    <button type="button" onclick="myF();">Click!</button>
+    <script>
+        function myF(){
+            document.getElementById('demo').innerHTML='Hello, Friends!' ;
+        }
+    </script>
 </body>
 </html>

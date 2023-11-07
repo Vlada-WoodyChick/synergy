@@ -1,3 +1,3 @@
- function myF() {
-document.getElementById('demo').innerHTML = "Немного абсолютно другого текста на нашей странице";
- } 
+//  function myF() {
+// document.getElementById('demo').innerHTML = "Hello, Friends!";
+//  } 

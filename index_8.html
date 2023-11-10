@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Lesson1</title>
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        #container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background: lightgreen;
+}
+#animate{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: red;
+}
+    </style>
 </head>
 
 <body>
@@ -13,59 +27,30 @@
 
     </style>
     <h2>JS Lesson1</h2>
+<p class="btn">
+    <button onclick="myM()">Try!</button>
+</p>
+    <div id="container">
+        <div id="animate">
 
-    <p id="demo1" >Hello, World!</p>
-    <p id="demo2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptas ratione aliquid! Sit, non maxime!</p>
-    <p id="demo3"></p>
-
-    <div >
-        <p class="className">
-            1 par about DOM querySelectorAll('.className')
-        </p>
-        <p class="className">
-            2 par about DOM querySelectorAll('.className')
-        </p>
-        <p class="className">
-            3 par about DOM querySelectorAll('.className')
-        </p> 
+        </div>
     </div>
-    <p id="demo4">Demo 4</p>
-    <div class="wrapper wrapper__img">
-        <img src="img/1.jpg" alt="" class="img" style="height: 50vh;">
-        <!-- <img src="img/2.jpg" alt="" class="img img_2" style="height: 50vh;">
-        <img src="img/3.jpg" alt="" class="img img_3" style="height: 50vh;">
-        <img src="img/4.jpg" alt="" class="img img_4" style="height: 50vh;"> -->
-    </div>
-    
-    <p  id="p1" style="font-size: 20px;">HI!</p>
-    <button type="button" onclick="document.getElementById('p1').style.color='red'">Вперед</button>
-    <button type="button" onclick="document.getElementById('p1').style.color = 'black'">Назад</button>
-    <button type="button" onclick="clickOn()">Img on</button>
-    <button type="button" onclick="clickOff()">Img off</button>
-    <!-- <button type="button" onclick="displayDate();">Push</button> -->
     <script>
-        function clickOn(){
-            document.getElementsByClassName('img')[0].src = "img/2.jpg";
+       function myM() {
+        let elem = document.getElementById('animate');
+        let pos = 0;
+        let id = setInterval(frame, 10);
+        function frame(){
+            if(pos === 450){
+                clearInterval(id);
+            }else{
+                pos++;
+                elem.style.top = pos +"px";
+                elem.style.left = pos +"px";
+            }
+            }
         }
-        function clickOff(){
-            document.getElementsByClassName('img')[0].src = "img/1.jpg";
-        }
-        
-        // const person = {
-        //     firstName: 'John',
-        //     lastName: 'Doe',
-        //     age: 30,
-        //     hairColor: 'black',
-        //     id: 7777,
-        //     fullName: function(){
-        //         let x = 5;
-        //         return this.firstName + " " + this.lastName + " "  + x;
-        //     },
-           
-        // }
-
        
-      
         
     </script>
 

@@ -18,16 +18,16 @@
     <p id="demo2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptas ratione aliquid! Sit, non maxime!</p>
     <p id="demo3"></p>
 
-    <div class="className">
-        <p>
-            1 par about DOM
+    <div >
+        <p class="className">
+            1 par about DOM querySelectorAll('.className')
         </p>
-        <p>
-            2 par about DOM
+        <p class="className">
+            2 par about DOM querySelectorAll('.className')
         </p>
-        <p>
-            3 par about DOM
-        </p>
+        <p class="className">
+            3 par about DOM querySelectorAll('.className')
+        </p> 
     </div>
     <p id="demo4">Demo 4</p>
 
@@ -45,7 +45,7 @@
         //     },
            
         // }
-       let el = document.getElementsByTagName('div');
+       let el = document.querySelectorAll('.className');
        document.getElementById('demo3').innerHTML = "текст первого параграфа содержит" + " " 
        + el[0].innerHTML +  "<br>" + "текст второго параграфа содержит" + " " + el[1].innerHTML +
        "<br>" + "текст второго параграфа содержит" + " " + el[3].innerHTML +

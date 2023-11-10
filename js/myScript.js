@@ -1,3 +1,4 @@
-//  function myF() {
-// document.getElementById('demo').innerHTML = "Hello, Friends!";
-//  } 
+ function myF() {
+document.getElementById('demo').innerHTML = "Hello, Friends!";
+ } 
+   

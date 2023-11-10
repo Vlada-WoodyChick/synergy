@@ -27,9 +27,11 @@
 
     </style>
     <h2>JS Lesson1</h2>
-<h1 onclick="this.innerHTML = 'OOOPS!' " ondblclick="this.innerHTML = 'TRY!' ">TRY!</h1>
+<h1 onclick="changeText(this);" >TRY!</h1>
     <script>
-      
+      function changeText(value){
+        value.innerHTML = 'COOOLLL!'
+      }
     </script>
 
 

@@ -13,19 +13,17 @@
     </style>
 </head>
 
-<body onload="checkC();">
+<body>
     
 
     <h2>JS Lesson1</h2>
-    <p id="demo" ></p>
+    
+    Ваше Имя ,<input type="text" id="fName" onchange="myF();">
     <script>
-       function checkC(){
-        let text = "";
-        if(navigator.cookieEnabled == true) {
-            text = "cookies are Enabled";
-        }else{ text = "cookies are off" }
-        document.getElementById('demo').innerHTML = text;
-       } 
+      function myF(){
+        let name = document.getElementById('fName');
+        name.value = name.value.toUpperCase();
+      }
     </script>
 
 

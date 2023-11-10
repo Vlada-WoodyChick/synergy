@@ -7,42 +7,25 @@
     <title>JS Lesson1</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        #container {
-            width: 500px;
-            height: 500px;
-            position: relative;
-            background: lightgreen;
-        }
-
-        #animate {
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            background: red;
-        }
-    </style>
-</head>
-
-<body>
-    <style>
         body {
             width: 100%;
         }
     </style>
+</head>
+
+<body onload="checkC();">
+    
+
     <h2>JS Lesson1</h2>
-    <button  class="btnClass"
-        style="width: 120px; height: 30px; background: lightcoral; color: lightblue; text-align: center;">
-        what time is it?
-    </button>
-
-    <div class="className" style="width: 60%; margin: 2vh auto; text-align: center;"></div>
+    <p id="demo" ></p>
     <script>
-        function displayDate() {
-
-
-            document.getElementsByClassName('className')[0].innerHTML = Date();
-        }
-        document.getElementsByClassName('btnClass')[0].onclick = displayDate;
+       function checkC(){
+        let text = "";
+        if(navigator.cookieEnabled == true) {
+            text = "cookies are Enabled";
+        }else{ text = "cookies are off" }
+        document.getElementById('demo').innerHTML = text;
+       } 
     </script>
 
 

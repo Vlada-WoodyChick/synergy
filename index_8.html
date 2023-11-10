@@ -15,10 +15,10 @@
     <h2>JS Lesson1</h2>
 
     <p id="demo1">Hello, World!</p>
-    <p id="demo2">Hello, World!</p>
-    <p id="demo3">Hello, World!</p>
+    <p id="demo2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptas ratione aliquid! Sit, non maxime!</p>
+    <p id="demo3"></p>
 
-    <button type="button" onclick="displayDate();">Push</button>
+    <!-- <button type="button" onclick="displayDate();">Push</button> -->
     <script>
         // const person = {
         //     firstName: 'John',
@@ -32,9 +32,9 @@
         //     },
            
         // }
-        function displayDate(){
-            document.getElementById(`demo2`).innerHTML = Date();
-        }
+       let el = document.getElementById('demo1').innerHTML;
+       document.getElementById('demo3').innerHTML = "текст первого параграфа содержит" + " " + el;
+
         
     </script>
 

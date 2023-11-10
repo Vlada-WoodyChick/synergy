@@ -1,11 +1,5 @@
-function oddOreEven(a) {
-    if (a % 2) {
-        document.getElementById(`demo1`).innerHTML = a + " " + "нечетное"
-        return;
-    };
-    if (!(a % 2)) { document.getElementById(`demo2`).innerHTML = a + " " + "четное" };
-    return
-
+function takeAway (num) {
+return num - 30;
 }
-oddOreEven(6);
-oddOreEven(9);
+document.getElementById(`demo2`).innerHTML = takeAway(40);
+       

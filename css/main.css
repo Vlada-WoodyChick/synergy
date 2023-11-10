@@ -12,3 +12,11 @@ p.cl1{
     font-size: 200%;
 }
 p{text-align: center;}
+
+/* .wrapper__img{
+    position: relative;
+} */
+
+.img{
+    position: relative;
+}

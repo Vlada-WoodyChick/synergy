@@ -30,9 +30,27 @@
         </p> 
     </div>
     <p id="demo4">Demo 4</p>
-
+    <div class="wrapper wrapper__img">
+        <img src="img/1.jpg" alt="" class="img" style="height: 50vh;">
+        <!-- <img src="img/2.jpg" alt="" class="img img_2" style="height: 50vh;">
+        <img src="img/3.jpg" alt="" class="img img_3" style="height: 50vh;">
+        <img src="img/4.jpg" alt="" class="img img_4" style="height: 50vh;"> -->
+    </div>
+    
+    <p  id="p1" style="font-size: 20px;">HI!</p>
+    <button type="button" onclick="document.getElementById('p1').style.color='red'">Вперед</button>
+    <button type="button" onclick="document.getElementById('p1').style.color = 'black'">Назад</button>
+    <button type="button" onclick="clickOn()">Img on</button>
+    <button type="button" onclick="clickOff()">Img off</button>
     <!-- <button type="button" onclick="displayDate();">Push</button> -->
     <script>
+        function clickOn(){
+            document.getElementsByClassName('img')[0].src = "img/2.jpg";
+        }
+        function clickOff(){
+            document.getElementsByClassName('img')[0].src = "img/1.jpg";
+        }
+        
         // const person = {
         //     firstName: 'John',
         //     lastName: 'Doe',
@@ -45,12 +63,9 @@
         //     },
            
         // }
-       let el = document.querySelectorAll('.className');
-       document.getElementById('demo3').innerHTML = "текст первого параграфа содержит" + " " 
-       + el[0].innerHTML +  "<br>" + "текст второго параграфа содержит" + " " + el[1].innerHTML +
-       "<br>" + "текст второго параграфа содержит" + " " + el[3].innerHTML +
-       "<br>" + "текст второго параграфа содержит" + " " + el[4].innerHTML;
 
+       
+      
         
     </script>
 

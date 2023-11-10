@@ -20,13 +20,14 @@
 
     <!-- <button type="button" onclick="document.write(5+6)">Push</button> -->
     <script>
-        let LastName = 'Max';
-        let lastName = 'Fedor';
-
-        document.getElementById('demo1').innerHTML = LastName; //Max
-        document.getElementById('demo2').innerHTML = lastName;  //Fedor
-        let a = 3 + 2 + '5' + 5;
-        document.getElementById('demo3').innerHTML = a; //555
+        const person = {
+            firstName: 'john',
+            lastName: 'Doe',
+            age: 30,
+            hairColor: 'black,'
+        }
+        document.getElementById(`demo1`).innerHTML = person.firstName + " " + person.lastName + 
+        " " + "is" +" " + person.age + " " + "years old" ;
     </script>
 
 

@@ -14,9 +14,22 @@
     </style>
     <h2>JS Lesson1</h2>
 
-    <p id="demo1">Hello, World!</p>
+    <p id="demo1" >Hello, World!</p>
     <p id="demo2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptas ratione aliquid! Sit, non maxime!</p>
     <p id="demo3"></p>
+
+    <div class="className">
+        <p>
+            1 par about DOM
+        </p>
+        <p>
+            2 par about DOM
+        </p>
+        <p>
+            3 par about DOM
+        </p>
+    </div>
+    <p id="demo4">Demo 4</p>
 
     <!-- <button type="button" onclick="displayDate();">Push</button> -->
     <script>
@@ -32,8 +45,11 @@
         //     },
            
         // }
-       let el = document.getElementById('demo1').innerHTML;
-       document.getElementById('demo3').innerHTML = "текст первого параграфа содержит" + " " + el;
+       let el = document.getElementsByTagName('div');
+       document.getElementById('demo3').innerHTML = "текст первого параграфа содержит" + " " 
+       + el[0].innerHTML +  "<br>" + "текст второго параграфа содержит" + " " + el[1].innerHTML +
+       "<br>" + "текст второго параграфа содержит" + " " + el[3].innerHTML +
+       "<br>" + "текст второго параграфа содержит" + " " + el[4].innerHTML;
 
         
     </script>

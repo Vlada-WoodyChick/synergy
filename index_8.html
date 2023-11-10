@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Lesson1</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <style>
-        
+
     </style>
     <h2>JS Lesson1</h2>
-    
-    <p id="demo">Hello, World!</p>
-    <button type="button" onclick="document.write(5+6)">Push</button>
-    <script >
-        alert(4);
-      window.alert(6 + 6);
-           
+
+    <p id="demo1">Hello, World!</p>
+    <p id="demo2">Hello, World!</p>
+    <p id="demo3">Hello, World!</p>
+
+    <!-- <button type="button" onclick="document.write(5+6)">Push</button> -->
+    <script>
+        let LastName = 'Max';
+        let lastName = 'Fedor';
+
+        document.getElementById('demo1').innerHTML = LastName; //Max
+        document.getElementById('demo2').innerHTML = lastName;  //Fedor
+        let a = 3 + 2 + '5' + 5;
+        document.getElementById('demo3').innerHTML = a; //555
     </script>
-        
-    
+
+
     <script src="js/myScript.js">
-        
-       
-       
+
+
+
     </script>
 </body>
+
 </html>

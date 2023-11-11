@@ -18,16 +18,22 @@
 
   <h2>JS Lesson1</h2>
   <button class="myBtn">TRY!</button>
+  <p id="demo"></p>
 
   <script>
 let el = document.getElementsByClassName('myBtn')[0];
-el.addEventListener('click', myF1);
+el.addEventListener('mouseover', myF1);
 el.addEventListener('click', myF2);
+el.addEventListener('mouseout', myF3);
+
 function myF1(){
-  alert('HELLO, PEOPLE!');
+  document.getElementById('demo').innerHTML = 'Mouse here!';
 }
 function myF2(){
-  alert('SECOND HELLO, PEOPLE!');
+  document.getElementById('demo').innerHTML = 'Clicked!';
+}
+function myF3(){
+  document.getElementById('demo').innerHTML = 'Mouse out!';
 }
   </script>
 

@@ -20,9 +20,14 @@
   <button class="myBtn">TRY!</button>
 
   <script>
-document.getElementsByClassName('myBtn')[0].addEventListener('click', myF );
-function myF(){
-  
+let el = document.getElementsByClassName('myBtn')[0];
+el.addEventListener('click', myF1);
+el.addEventListener('click', myF2);
+function myF1(){
+  alert('HELLO, PEOPLE!');
+}
+function myF2(){
+  alert('SECOND HELLO, PEOPLE!');
 }
   </script>
 

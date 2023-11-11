@@ -22,8 +22,10 @@
   <p id="demo1"></p>
   <script>
 let x = "Some cool text here and there and some more cool text will be soon.";
-document.getElementById("demo").innerHTML = x.replace(/cool/g, 'intersting');
+document.getElementById("demo").innerHTML = x.toLowerCase();
+document.getElementById("demo1").innerHTML = x[0].toUpperCase();
   </script>
+
 
 
   <script src=" js/myScript.js">

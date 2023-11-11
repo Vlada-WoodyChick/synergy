@@ -17,13 +17,13 @@
 
 
   <h2>JS Lesson1</h2>
-  
+  <p>String length</p>
   <p id="demo"></p>
-
+  <p id="demo1"></p>
   <script>
-window.addEventListener('resize', function(){ 
-  document.getElementById('demo').innerHTML = Math.random();
-});
+let txt = 'IT\'s Lorem ipsum, dolor sit amet consectetur \\adipisicing elit. Odio, suscipit! Lorem ipsum dolor sit amet.';
+document.getElementById("demo").innerHTML = txt.length;
+document.getElementById("demo1").innerHTML = txt;
 
   </script>
 

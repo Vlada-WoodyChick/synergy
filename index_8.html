@@ -17,26 +17,23 @@
 
 
   <h2>JS Lesson1</h2>
-  <h3>Преобразовываем мили в километры в час</h3>
-  <p>
-    <label for="inMPH">Введите расстояние в милях.</label>
-    <input type="number" 
-    id="inMPH" 
-    plaseholder="MPH"
-    oninput="speedConverter(this.value)"
-    onchange="speedConverter(this.value)">
-  </p>
-  <p>
-    KPH: <span id="outputKPH"></span>
-  </p>
-    <script>
-    function speedConverter(valNum){
-      document.getElementById('outputKPH').innerHTML = valNum * 1.61
-    }
-    </script>
+  <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+    style="width: 200px; height: 200px; background: tomato; text-align: center;">
+    Mouse here!
+  </div>
+
+  <script>
+function mOver(obj){
+  obj.innerHTML = 'COOOOL!';
+}
+
+function mOut(obj){
+  obj.innerHTML = 'Mouse here!';
+}
+  </script>
 
 
-    <script src=" js/myScript.js">
+  <script src=" js/myScript.js">
 
 
 

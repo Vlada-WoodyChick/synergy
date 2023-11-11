@@ -17,13 +17,17 @@
 
 
   <h2>JS Lesson1</h2>
-  <p>String length!</p>
+  <p>String split!</p>
   <p id="demo"></p>
   <p id="demo1"></p>
   <script>
-let str = "Some cool text here and there and some more cool text will be soon.";
-document.getElementById("demo").innerHTML = str;
-document.getElementById("demo1").innerHTML = str.charAt(0);
+let str = 'Hello, Dolly!'
+let arr = str.split('');
+let txt = '';
+for(i = 0; i <arr.length; i++){
+txt += arr[i] + '<br>';
+}
+document.getElementById("demo").innerHTML = txt;
 
   </script>
 

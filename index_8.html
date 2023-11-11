@@ -2,36 +2,45 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Lesson1</title>
-    <link rel="stylesheet" href="css/main.css">
-    <style>
-        body {
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Lesson1</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-    
 
-    <h2>JS Lesson1</h2>
-    
-    Ваше Имя  <input type="text" id="fName" onchange="myF();">
+
+  <h2>JS Lesson1</h2>
+  <h3>Преобразовываем мили в километры в час</h3>
+  <p>
+    <label for="inMPH">Введите расстояние в милях.</label>
+    <input type="number" 
+    id="inMPH" 
+    plaseholder="MPH"
+    oninput="speedConverter(this.value)"
+    onchange="speedConverter(this.value)">
+  </p>
+  <p>
+    KPH: <span id="outputKPH"></span>
+  </p>
     <script>
-      function myF(){
-        let name = document.getElementById('fName');
-        name.value = name.value.toUpperCase();
-      }
+    function speedConverter(valNum){
+      document.getElementById('outputKPH').innerHTML = valNum * 1.61
+    }
     </script>
 
 
-    <script src="js/myScript.js">
+    <script src=" js/myScript.js">
 
 
 
-    </script>
+  </script>
 </body>
 
 </html>

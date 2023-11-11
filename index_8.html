@@ -17,24 +17,14 @@
 
 
   <h2>JS Lesson1</h2>
-  <button class="myBtn">TRY!</button>
+  
   <p id="demo"></p>
 
   <script>
-let el = document.getElementsByClassName('myBtn')[0];
-el.addEventListener('mouseover', myF1);
-el.addEventListener('click', myF2);
-el.addEventListener('mouseout', myF3);
+window.addEventListener('resize', function(){ 
+  document.getElementById('demo').innerHTML = Math.random();
+});
 
-function myF1(){
-  document.getElementById('demo').innerHTML += 'Mouse here! <br>';
-}
-function myF2(){
-  document.getElementById('demo').innerHTML += 'Clicked! <br>';
-}
-function myF3(){
-  document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + 'Mouse out! <br>';
-}
   </script>
 
 

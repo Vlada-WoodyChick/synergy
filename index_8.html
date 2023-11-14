@@ -37,7 +37,11 @@
  
   <script>
 function myF(){
-  let age = document.getElementById("age").value;
+  
+  let age = + document.getElementById("age").value;
+  if(isNaN(age)) {
+    document.getElementById("demo").innerHTML ='Введите цифры.' ;
+     return;}
   let vote = (age < 18) ? "Рано":"Можно";
   document.getElementById("demo").innerHTML = vote + " " + "голосовать";
 }

@@ -36,22 +36,23 @@
   <p id="demo4"></p>
  
   <script>
-    function myF(){
-      let hour = new Date().getHours();
-if(hour >= 6 && hour<= 11) {
-  document.getElementById("demo").innerHTML = "Good Morning!";
-  return;
-}
-if(hour > 11 && hour<= 18 ) {
-  document.getElementById("demo").innerHTML = "Good Afternoon!";
-  return;
-}
-if(hour > 18 && hour < 24 ) {
-  greeting = "Good Everning!";
-  // return ;
-}
-document.getElementById("demo").innerHTML = greeting;
+    function myF() {
+      let day;
+      switch(new Date().getDay() ) {
+        default: day = 'Waiting for Holidays!';
+        break;
+    case 0: day ='Sunday';
+    break;
+   
+    case 6: day ='Saturday';
+    break;
+    // case 2: day ='Tuesday';
+    //break;
+    
+   }
+   document.getElementById("demo").innerHTML = day;
     }
+   
     
   </script>
 

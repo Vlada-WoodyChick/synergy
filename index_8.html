@@ -17,17 +17,14 @@
 
 
   <h2>JS Lesson1</h2>
-  <p>String split!</p>
+  <p>Arrays!</p>
   <p id="demo"></p>
   <p id="demo1"></p>
   <script>
-let str = 'Hello, Dolly!'
-let arr = str.split('');
-let txt = '';
-for(i = 0; i <arr.length; i++){
-txt += arr[i] + '<br>';
-}
-document.getElementById("demo").innerHTML = txt;
+const car = ['Gelly', 'Gaz', 'Cherry', 'BMW', 5];
+document.getElementById("demo").innerHTML = car[0];
+document.getElementById("demo1").innerHTML = car[4];
+
 
   </script>
 

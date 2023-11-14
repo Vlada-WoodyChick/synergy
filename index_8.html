@@ -29,28 +29,14 @@
   <p id="demo2"></p>
   <p id="demo3"></p>
   <p id="demo4"></p>
+  <button id = "push">Push!</button>
   <script>
     const fruits = ['Apple', 'Orange', 'Mango', 'Kiwi', 'Banana',];
-    fruits[2] = 'Lemon';
-    let fruitsLength = fruits.length;
-    let txt = '<ul>';
-      for(i = 0; i < fruitsLength; i++ ) {
-        txt += '<li>' + fruits[i] + '</li>'
-      }
-txt += '</ul>'
-document.querySelector("#demo").innerHTML =  txt;
-fruits.shift();
-fruits.unshift('Coconut');
-document.querySelector("#demo1").innerHTML =  fruits.toString();
-fruits.push('Pineapple');
-
-document.querySelector("#demo2").innerHTML =  fruits.toString();
-document.querySelector("#demo3").innerHTML =  fruits.join(' * ');
-let myBooks = ['Some book 1', 'Some book 2', 'Cool book',];
-let myArr = fruits.concat(myBooks);
-document.querySelector("#demo4").innerHTML =  myArr.join('<br>');
-
-
+   function pushF() {
+    fruits.splice(2, 0, 'Bobo', 'Soso',);
+    document.querySelector("#demo").innerHTML =  fruits.toString();
+   }
+   document.querySelector("#push").addEventListener('click', pushF );
   </script>
 
 

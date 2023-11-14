@@ -36,17 +36,13 @@
   <p id="demo4"></p>
  
   <script>
-   let person = {
-    name: 'Mike',
-    lname: 'Tison',
-    age: 45,
+   let i = 0;
+   let txt = "";
+   while(i <= 0 && i >= 10) {
+    txt += 'The Number is ' +  i + '; <br>';
+    i++;
    }
-   let key;
-   let acc = "";
-    for(key in person){
-      acc += person[key] + " ";
-    }
-    document.getElementById("demo").innerHTML = acc;
+   document.getElementById("demo").innerHTML = txt;
   </script>
 
 

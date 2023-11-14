@@ -10,6 +10,12 @@
     body {
       width: 100%;
     }
+    #demo{
+      text-decoration: none;
+    }
+    li{
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -21,14 +27,15 @@
   <p id="demo"></p>
   <p id="demo1"></p>
   <script>
-const car = {make:'Gelly',
-model:'Atlas', 
-color: 'grey',
-year: 2022,
-price: 2500000,
-currency: 'rub', };
-document.getElementById("demo").innerHTML = car['model'];
-document.getElementById("demo1").innerHTML = car['price'] + ' ' + car['currency'];
+    const fruits = ['Apple', 'Orange', 'Mango', 'Kiwi', 'Banana',];
+    fruits.push('Lemon');
+    let fruitsLength = fruits.length;
+    let txt = '<ul>';
+      for(i = 0; i < fruitsLength; i++ ) {
+        txt += '<li>' + fruits[i] + '</li>'
+      }
+txt += '</ul>'
+document.querySelector("#demo").innerHTML =  txt;
 
 
   </script>

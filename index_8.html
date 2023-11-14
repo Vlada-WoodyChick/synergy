@@ -28,6 +28,7 @@
   <p id="demo1"></p>
   <p id="demo2"></p>
   <p id="demo3"></p>
+  <p id="demo4"></p>
   <script>
     const fruits = ['Apple', 'Orange', 'Mango', 'Kiwi', 'Banana',];
     fruits[2] = 'Lemon';
@@ -42,8 +43,12 @@ fruits.shift();
 fruits.unshift('Coconut');
 document.querySelector("#demo1").innerHTML =  fruits.toString();
 fruits.push('Pineapple');
-document.querySelector("#demo2").innerHTML =  fruits.toString();
 
+document.querySelector("#demo2").innerHTML =  fruits.toString();
+document.querySelector("#demo3").innerHTML =  fruits.join(' * ');
+let myBooks = ['Some book 1', 'Some book 2', 'Cool book',];
+let myArr = fruits.concat(myBooks);
+document.querySelector("#demo4").innerHTML =  myArr.join('<br>');
 
 
   </script>

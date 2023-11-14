@@ -17,13 +17,18 @@
 
 
   <h2>JS Lesson1</h2>
-  <p>Arrays!</p>
+  <p>Arrays and Objects!</p>
   <p id="demo"></p>
   <p id="demo1"></p>
   <script>
-const car = ['Gelly', 'Gaz', 'Cherry', 'BMW', 5];
-document.getElementById("demo").innerHTML = car[0];
-document.getElementById("demo1").innerHTML = car[4];
+const car = {make:'Gelly',
+model:'Atlas', 
+color: 'grey',
+year: 2022,
+price: 2500000,
+currency: 'rub', };
+document.getElementById("demo").innerHTML = car['model'];
+document.getElementById("demo1").innerHTML = car['price'] + ' ' + car['currency'];
 
 
   </script>

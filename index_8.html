@@ -36,22 +36,17 @@
   <p id="demo4"></p>
  
   <script>
-    function myF() {
-      let day;
-      switch(new Date().getDay() ) {
-        default: day = 'Waiting for Holidays!';
-        break;
-    case 0:   
-    case 6: day ='Ура, выходные!';
-    break;
-    // case 2: day ='Tuesday';
-    //break;
-    
+   let person = {
+    name: 'Mike',
+    lname: 'Tison',
+    age: 45,
    }
-   document.getElementById("demo").innerHTML = day;
+   let key;
+   let acc = "";
+    for(key in person){
+      acc += person[key] + " ";
     }
-   
-    
+    document.getElementById("demo").innerHTML = acc;
   </script>
 
 

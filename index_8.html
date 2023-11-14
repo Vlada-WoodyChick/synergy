@@ -28,7 +28,7 @@
   <p id="demo1"></p>
   <script>
     const fruits = ['Apple', 'Orange', 'Mango', 'Kiwi', 'Banana',];
-    fruits.push('Lemon');
+    fruits[fruits.length] = 'Lemon';
     let fruitsLength = fruits.length;
     let txt = '<ul>';
       for(i = 0; i < fruitsLength; i++ ) {

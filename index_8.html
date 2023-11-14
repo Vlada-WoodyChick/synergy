@@ -25,8 +25,8 @@
   <h2>JS Lesson1</h2>
   <p>Arrays and Objects!</p>
   
-    <input id="age" value = ">18">
-    <button id = "push" >Push!</button>
+    <!-- <input id="age" value = ">18"> -->
+    <button id = "push" onclick="myF()">Push!</button>
   
  
   <p id="demo"></p>
@@ -36,16 +36,23 @@
   <p id="demo4"></p>
  
   <script>
-function myF(){
-  
-  let age = + document.getElementById("age").value;
-  if(isNaN(age)) {
-    document.getElementById("demo").innerHTML ='Введите цифры.' ;
-     return;}
-  let vote = (age < 18) ? "Рано":"Можно";
-  document.getElementById("demo").innerHTML = vote + " " + "голосовать";
+    function myF(){
+      let hour = new Date().getHours();
+if(hour >= 6 && hour<= 11) {
+  document.getElementById("demo").innerHTML = "Good Morning!";
+  return;
 }
-   document.getElementById( "push").addEventListener('click', myF );
+if(hour > 11 && hour<= 18 ) {
+  document.getElementById("demo").innerHTML = "Good Afternoon!";
+  return;
+}
+if(hour > 18 && hour < 24 ) {
+  greeting = "Good Everning!";
+  // return ;
+}
+document.getElementById("demo").innerHTML = greeting;
+    }
+    
   </script>
 
 

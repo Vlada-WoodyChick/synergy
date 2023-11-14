@@ -24,21 +24,24 @@
 
   <h2>JS Lesson1</h2>
   <p>Arrays and Objects!</p>
+  
+    <input id="age" value = ">18">
+    <button id = "push" >Push!</button>
+  
+ 
   <p id="demo"></p>
   <p id="demo1"></p>
   <p id="demo2"></p>
   <p id="demo3"></p>
   <p id="demo4"></p>
-  <!-- <input id="age" value=">18"> -->
-  <button id = "push">Push!</button>
+ 
   <script>
-    document.getElementById("demo").innerHTML =  " ";
-      document.getElementById("demo1").innerHTML = " ";
-    document.getElementById("push").addEventListener('click', myF);
-    function myF() {
-      document.getElementById("demo").innerHTML =  null ;
-      document.getElementById("demo1").innerHTML = Boolean(null);
-    }
+function myF(){
+  let age = document.getElementById("age").value;
+  let vote = (age < 18) ? "Рано":"Можно";
+  document.getElementById("demo").innerHTML = vote + " " + "голосовать";
+}
+   document.getElementById( "push").addEventListener('click', myF );
   </script>
 
 

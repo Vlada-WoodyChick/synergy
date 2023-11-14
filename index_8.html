@@ -31,12 +31,14 @@
   <p id="demo4"></p>
   <button id = "push">Push!</button>
   <script>
-    const fruits = ['Apple', 'Orange', 'Mango', 'Kiwi', 'Banana',];
-   function pushF() {
-    fruits.splice(2, 0, 'Bobo', 'Soso',);
-    document.querySelector("#demo").innerHTML =  fruits.toString();
-   }
-   document.querySelector("#push").addEventListener('click', pushF );
+    document.getElementById("push").addEventListener('click', myF100);
+    document.getElementById("push").addEventListener('click', myF10);
+    function myF100(){
+      document.getElementById("demo").innerHTML =Math.floor(Math.random()* 101 );
+    }
+    function myF10(){
+      document.getElementById("demo1").innerHTML =Math.floor(Math.random()* 11 );
+    }
   </script>
 
 

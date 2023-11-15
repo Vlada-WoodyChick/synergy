@@ -16,13 +16,13 @@
 
 <body>
 
-
-  <h2>JS Lesson1</h2>
-  <p>Arrays and Objects!</p>
+<h2>JS lessons.</h2>
+  <h1 id = 'id01'>First page.</h2>
+  <p id = 'id02'></p>
   
     <!-- <input id="age" value = ">18"> -->
-    <button id = "push" onclick="myF()">Push!</button>
-  
+    <!-- <button id = "push" onclick="myF()">Push!</button>
+   -->
  
   <p id="demo"></p>
   <p id="demo1"></p>
@@ -31,17 +31,7 @@
   <p id="demo4"></p>
  
   <script>
- let txt = this;
- document.getElementById("demo").innerHTML = txt;
- const person = {
-  fname: 'Mike',
-  lname: 'Henderson',
-  id: 5566,
-  myF: function(){
-    return this.fname + " " + this.lname;
-  }
- }
- document.getElementById("demo1").innerHTML = person.myF();
+document.getElementById('id02').innerHTML = document.getElementById('id01').innerHTML;
   </script>
 
 

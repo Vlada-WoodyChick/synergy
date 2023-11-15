@@ -1,61 +1,190 @@
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS Lesson</title>
-  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
   <style>
     body {
-      width: 100%;
+      margin: 0;
+      font-family: Helvetica, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .container {
+      position: relative;
+      /*для позиционирования стрелок справа и слева и по центру по высоте*/
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 12px;
+      /* margin-top: -50px; */
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      border-radius: 0 6px 6px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 6px 0 0 6px;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .numberText {
+      color: #f2f2f2;
+      font-size: 16px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 3px 16px;
+      color: white;
+      font-family: "Times", serif;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column {
+      float: left;
+      width: 16.66%;
+    }
+
+    .demo {
+      opacity: 0.7;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
     }
   </style>
 </head>
 
 <body>
-  <h1>Some new page</h1>
 
-  <h2>JS DOM</h2>
+  <h2 style="text-align: center;">Галлерея</h2>
 
-  <button id="push" onclick="myFunction()">Push!</button>
-  <p>Hello!</p>
-  <p>World!</p>
-  <p>You are</p>
-  <p>Not alone</p>
-  <p id="demo"></p>
-  <p id="demo5"></p>
+  <div class="container">
 
-  <h2>JS lessons.</h2>
-  <!-- <input id="age" value = ">18"> -->
-  <!-- <button id = "push" onclick="myF()">Push!</button>
-   -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="img/8.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="img/9.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="img/10.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="img/11.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="img/12.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="img/13.jpg" style="width: 100%;">
+    </div>
 
-  <!-- <p id="demo"></p>
-  <p id="demo1"></p>
-  <p id="demo2"></p>
-  <p id="demo3"></p>
-  <p id="demo4"></p> -->
+    <a class="prev" onclick="plusSlides(-1)">-</a>
+    <a class="next" onclick="plusSlides(1)">+</a>
 
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="img/8.jpg" style="width: 100%" onclick="currentSlide(1)" alt="Вид на горы">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/9.jpg" style="width: 100%" onclick="currentSlide(2)" alt="Афины">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/10.jpg" style="width: 100%" onclick="currentSlide(3)" alt="Над облаками">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/11.jpg" style="width: 100%" onclick="currentSlide(4)" alt="На берегу озера">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/12.jpg" style="width: 100%" onclick="currentSlide(5)" alt="Парус">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/13.jpg" style="width: 100%" onclick="currentSlide(6)" alt="Альпы">
+      </div>
+    </div>
+
+  </div>
   <script>
-    // let acc = document.getElementsByTagName('p');
-    // document.getElementById("demo").innerHTML = 'Paragraph 2 contents text' + ' ' + acc[1].innerHTML;
-    function myFunction() {
-      let myCollection = document.querySelectorAll('p');
-   
-    for(i = 0; i < myCollection.length; i++){
-      myCollection[i].style.color = 'red';
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
     }
-    document.getElementById("demo").innerHTML ="Array.isArray(myCollection)" +"  - " + Array.isArray(myCollection);
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
     }
-  </script>
 
-
-
-  <script src=" js/myScript.js">
-
-
-
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
   </script>
 </body>
 

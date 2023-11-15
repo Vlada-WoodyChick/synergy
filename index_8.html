@@ -14,15 +14,17 @@
 </head>
 
 <body>
-<h1>Some new page</h1>
+  <h1>Some new page</h1>
 
- <h2>JS DOM</h2> 
+  <h2>JS DOM</h2>
 
-
- <p>Hello!</p>
- <p>World!</p>
- <p id="demo"></p>
-
+  <button id="push" onclick="myFunction()">Push!</button>
+  <p>Hello!</p>
+  <p>World!</p>
+  <p>You are</p>
+  <p>Not alone</p>
+  <p id="demo"></p>
+  <p id="demo5"></p>
 
   <h2>JS lessons.</h2>
   <!-- <input id="age" value = ">18"> -->
@@ -36,9 +38,16 @@
   <p id="demo4"></p> -->
 
   <script>
-   let acc = document.getElementsByTagName('p');
-   document.getElementById("demo").innerHTML = 'Paragraph 2 contents text' + ' ' +  acc[1].innerHTML;
-
+    // let acc = document.getElementsByTagName('p');
+    // document.getElementById("demo").innerHTML = 'Paragraph 2 contents text' + ' ' + acc[1].innerHTML;
+    function myFunction() {
+      let myCollection = document.getElementsByTagName('p');
+   
+    for(i = 0; i < myCollection.length; i++){
+      myCollection[i].style.color = 'red';
+    }
+    document.getElementById("demo").innerHTML ="Array.isArray(myCollection)" +"  - " + Array.isArray(myCollection);
+    }
   </script>
 
 

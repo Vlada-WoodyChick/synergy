@@ -16,22 +16,22 @@
 
 <body>
 
-<h2>JS lessons.</h2>
+
   <h1 id = 'id01'>First page.</h2>
   <p id = 'id02'></p>
-  
+  <h2>JS lessons.</h2>
     <!-- <input id="age" value = ">18"> -->
     <!-- <button id = "push" onclick="myF()">Push!</button>
    -->
  
-  <p id="demo"></p>
+  <!-- <p id="demo"></p>
   <p id="demo1"></p>
   <p id="demo2"></p>
   <p id="demo3"></p>
-  <p id="demo4"></p>
+  <p id="demo4"></p> -->
  
   <script>
-document.getElementById('id02').innerHTML = document.getElementById('id01').innerHTML;
+document.getElementById('id02').innerHTML = document.getElementById('id01').firstChild.nodeValue;
   </script>
 
 

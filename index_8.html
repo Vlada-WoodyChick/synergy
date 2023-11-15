@@ -16,12 +16,9 @@
 
 <body>
 
-<p id="id01">Hello Every One!</p>
-<div>
-  <p>DOM is important!</p>
-<p>Some text.</p>
-</div>
-  
+<h1 id="id1">My page.</h1>
+<p id="id2"></p>
+<p id="id3"></p>
   <h2>JS lessons.</h2>
     <!-- <input id="age" value = ">18"> -->
     <!-- <button id = "push" onclick="myF()">Push!</button>
@@ -34,7 +31,9 @@
   <p id="demo4"></p> -->
  
   <script>
-alert(document.documentElement.innerHTML)
+document.getElementById("id2").innerHTML = document.getElementById("id1").nodeName;
+document.getElementById("id3").innerHTML = document.getElementById("id1").nodeType;
+
   </script>
 
 

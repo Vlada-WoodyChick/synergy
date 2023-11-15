@@ -32,11 +32,12 @@
 
   <script>
     let par = document.createElement('p');
-    let node = document.createTextNode('Created paragraf.');
+    let node = document.createTextNode('Created paragraf end.');
     par.appendChild(node);
     let el = document.getElementById("div1");
-el.appendChild(par);
-
+    el.appendChild(par);
+    let child = document.getElementById("p1");
+    el.insertBefore(par, child);
 
   </script>
 

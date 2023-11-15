@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS Lesson1</title>
+  <title>JS Lesson</title>
   <link rel="stylesheet" href="css/main.css">
   <style>
     body {
@@ -14,11 +14,16 @@
 </head>
 
 <body>
+<h1>Some new page</h1>
 
-  <div id="div1">
-    <p id="p1">Paragraf 1.</p>
-    <p id="p2">Paragraf 2.</p>
-  </div>
+ <h2>JS DOM</h2> 
+
+
+ <p>Hello!</p>
+ <p>World!</p>
+ <p id="demo"></p>
+
+
   <h2>JS lessons.</h2>
   <!-- <input id="age" value = ">18"> -->
   <!-- <button id = "push" onclick="myF()">Push!</button>
@@ -31,12 +36,8 @@
   <p id="demo4"></p> -->
 
   <script>
-    let parent = document.getElementById("div1");
-    let child = document.getElementById("p1");
-    let paraNew = document.createElement('p');
-    let node = document.createTextNode('Created paragraf ');
-    paraNew.appendChild(node);
-    parent.replaceChild(paraNew, child);
+   let acc = document.getElementsByTagName('p');
+   document.getElementById("demo").innerHTML = 'Paragraph 2 contents text' + ' ' +  acc[1].innerHTML;
 
   </script>
 

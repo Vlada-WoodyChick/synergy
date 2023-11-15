@@ -10,12 +10,7 @@
     body {
       width: 100%;
     }
-    #demo{
-      text-decoration: none;
-    }
-    li{
-      text-decoration: none;
-    }
+    
   </style>
 </head>
 
@@ -36,13 +31,17 @@
   <p id="demo4"></p>
  
   <script>
-   let i = 0;
-   let txt = "";
-   do{
-    txt += 'The Number is ' +  i + '; <br>';
-    i++;
-   } while(i <= 0 && i >= 10) 
-   document.getElementById("demo").innerHTML = txt;
+ let txt = this;
+ document.getElementById("demo").innerHTML = txt;
+ const person = {
+  fname: 'Mike',
+  lname: 'Henderson',
+  id: 5566,
+  myF: function(){
+    return this.fname + " " + this.lname;
+  }
+ }
+ document.getElementById("demo1").innerHTML = person.myF();
   </script>
 
 

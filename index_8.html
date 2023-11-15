@@ -10,29 +10,33 @@
     body {
       width: 100%;
     }
-    
   </style>
 </head>
 
 <body>
 
-<h1 id="id1">My page.</h1>
-<p id="id2"></p>
-<p id="id3"></p>
+  <div id="div1">
+    <p id="p1">Paragraf 1.</p>
+    <p id="p2">Paragraf 2.</p>
+  </div>
   <h2>JS lessons.</h2>
-    <!-- <input id="age" value = ">18"> -->
-    <!-- <button id = "push" onclick="myF()">Push!</button>
+  <!-- <input id="age" value = ">18"> -->
+  <!-- <button id = "push" onclick="myF()">Push!</button>
    -->
- 
+
   <!-- <p id="demo"></p>
   <p id="demo1"></p>
   <p id="demo2"></p>
   <p id="demo3"></p>
   <p id="demo4"></p> -->
- 
+
   <script>
-document.getElementById("id2").innerHTML = document.getElementById("id1").nodeName;
-document.getElementById("id3").innerHTML = document.getElementById("id1").nodeType;
+    let par = document.createElement('p');
+    let node = document.createTextNode('Created paragraf.');
+    par.appendChild(node);
+    let el = document.getElementById("div1");
+el.appendChild(par);
+
 
   </script>
 
